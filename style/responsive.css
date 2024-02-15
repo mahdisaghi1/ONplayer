@@ -1,0 +1,58 @@
+/* pc and large monitors */
+@media only screen and (min-width: 1200px) {
+    /* main content */
+    body {
+        margin: 0;
+    }
+    .MP_content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+    /* list content */
+    .list {
+        width: 25%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .searchBox {
+        display: grid;
+        width: 100%;
+        height: 10vh;
+    }
+    .musicList {
+        display: flex;
+        width: 100%;
+        height: 80vh;
+    }
+    .menu {
+        display: grid;
+        width: 100%;
+        height: 10vh;
+    }
+    /* list content ---> searchbox Divs */
+    
+    
+    /* player content */
+    .player {
+        width: 75%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cover {
+        width: 80%;
+        height: 50vh;
+    }
+    .information {
+        width: 80%;
+        height: 20vh;
+    }
+    .Cpanel {
+        width: 80%;
+        height: 30vh;
+    }
+}
