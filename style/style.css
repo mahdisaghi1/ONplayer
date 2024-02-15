@@ -1,3 +1,4 @@
+
 /* pc and large monitors */
 @media only screen and (min-width: 1200px) {
     /* main content */
@@ -12,6 +13,7 @@
     }
     /* list content */
     .list {
+        background-color: #1F2544;
         width: 25%;
         height: 100vh;
         display: flex;
@@ -37,19 +39,34 @@
     
     /* player content */
     .player {
+        background-color: #474F7A;
         width: 75%;
         height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    /* cover style */
     .cover {
         width: 80%;
         height: 50vh;
+        background-color: #F3F3F3;
     }
+    /* information style */
     .information {
         width: 80%;
         height: 20vh;
+        text-align: center;
+    }
+    .InformText {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .MusicName {
+        font-size: 40px;
+    }
+    .Artist {
+        font-size: 25px;
     }
     .Cpanel {
         width: 80%;
