@@ -13,7 +13,7 @@
         <div class="list">
             <div class="searchBox">
                 <div class="filter">
-                    <button><img src="icons/filter.svg" alt=""></button>
+                    <button class="FilterBtn"><img src="icons/filter.svg" alt="" class="FilterIC"></button>
                 </div>
                 <div class="search">
                     <input type="text" placeholder="Search" class="searchInput">
@@ -58,30 +58,31 @@
             </div>
             <div class="Cpanel">
                 <div class="options">
-                    <div>
-                        <img src="icons/like-off.svg" class="OPT-icons" alt="">
+                    <div class="OPT-icons">
+                        <img src="icons/like-off.svg" alt="">
                     </div>
-                    <div>
-                        <img src="icons/download.svg" class="OPT-icons" alt="">
+                    <div class="OPT-icons">
+                        <img src="icons/download.svg" alt="">
                     </div>
-                    <div>
-                        <img src="icons/options.svg" class="OPT-icons" alt="">
+                    <div class="OPT-icons">
+                        <img src="icons/options.svg" alt="">
                     </div>
                 </div>
                 <div class="musicBar">
-                    <h1 class="Mbar">00:00</h1>
-                    <input type="range" name="" id="" class="music-Bar">
-                    <h1 class="Mbar">03:25</h1>
+                    <span id="current-time">00:00</span>
+                    <label for="music-progress">Progress:</label>
+                    <input type="range" id="music-progress" min="0" max="100" value="0">
+                    <span id="total-time">03:30</span>
                 </div>
                 <div class="Control">
                     <div class="Cicon">
-                        <img src="icons/change.svg" alt="" class="prevIC">
+                        <img src="icons/prev.svg" alt="" class="prevIC">
                     </div>
                     <div class="Cicon">
                         <img src="icons/play.svg" alt="" class="pas-stop">
                     </div>
                     <div class="Cicon">
-                        <img src="icons/change.svg" alt="" class="nextIC">
+                        <img src="icons/next.svg" alt="" class="nextIC">
                     </div>
                 </div>
             </div>

@@ -1,19 +1,23 @@
 @font-face {
     font-family: "OpenSans-Regular";
     src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
-  }
+}
+
 /* pc and large monitors */
 @media only screen and (min-width: 1200px) {
+
     /* main content */
     body {
         margin: 0;
     }
+
     .MP_content {
         width: 100%;
         height: 100vh;
         display: flex;
         flex-direction: row;
     }
+
     /* list content */
     .list {
         background-color: #1F2544;
@@ -22,6 +26,7 @@
         display: flex;
         flex-direction: column;
     }
+
     .searchBox {
         display: grid;
         width: 100%;
@@ -31,6 +36,7 @@
         margin-bottom: 20px;
 
     }
+
     .musicList {
         display: flex;
         width: 100%;
@@ -40,26 +46,45 @@
         font-family: OpenSans-Regular;
         color: #FFFFFF;
     }
+
     .menu {
         display: grid;
         width: 100%;
         height: 10vh;
     }
+
     /* list content ---> searchbox Divs */
+    .filterIc {
+        height: 4vh;
+
+    }
+
+    .FilterBtn {
+        background: #1F2544;
+        border: none;
+    }
+
+    .searchIcon {
+        padding: 11%;
+        transform: translate(-30px)
+    }
+
     .searchInput {
         border-radius: 20px;
         width: 100%;
-        height: 4vh;
-        border: none; 
+        height: 4.5vh;
+        border: none;
         outline: none;
-        padding-left:10px ;
+        padding-left: 10px;
         font-size: 20px;
         font-family: OpenSans-Regular;
     }
+
     /* list content ---> music divs */
     .Musicitem {
         width: 90%;
     }
+
     hr {
         width: 100%;
     }
@@ -73,6 +98,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     /* cover style */
     .cover {
         width: 70%;
@@ -85,28 +111,34 @@
         justify-content: center;
         align-items: center;
     }
+
     .music-icon {
         width: 20vh;
-        
+
     }
+
     /* information style */
     .information {
         width: 70%;
         height: 10vh;
         text-align: center;
     }
+
     .InformText {
         margin-top: 10px;
         margin-bottom: 10px;
         font-family: OpenSans-Regular;
         color: #FFFFFF;
     }
+
     .MusicName {
         font-size: 40px;
     }
+
     .Artist {
         font-size: 25px;
     }
+
     /* control panel style */
     .Cpanel {
         width: 70%;
@@ -115,13 +147,23 @@
         flex-direction: column;
         align-items: center;
     }
+
     .options {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
+        margin-top: 5%;
         width: 100%;
         height: 10vh;
     }
+
+    .OPT-icons {
+        margin-left:5% ;
+        margin-right:5% ;
+    }
+
+    /* music bar style */
     .musicBar {
         display: flex;
         flex-direction: row;
@@ -129,11 +171,28 @@
         width: 100%;
         height: 5vh;
     }
+    #music-progress {
+        -webkit-appearance: none; /* Customize thumb appearance */
+        width: 100%; /* Adjust width as needed */
+        height:2vh; /* Adjust height as needed */
+        background-color: #639CD9;
+        border-radius: 70px;
+      }
+      ::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 5px;
+      }
     .Control {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         width: 100%;
         height: 20vh;
     }
-}
+    .Cicon {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
