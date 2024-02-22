@@ -25,15 +25,20 @@
             <div class="musicList">
                 <div class="Musicitem">
                     <hr>
+                    <audio src="audio/12 Eminem - Mockingbird.mp3" class="Songs"></audio>
                     <h4>eminem - Mockingbird</h4>
                 </div>
                 <div class="Musicitem">
                     <hr>
                     <h4>viguen - chera nemiragsi</h4>
+                    <audio src="audio/@audio_editorbot.mp3" class="Songs"></audio>
+
                 </div>
                 <div class="Musicitem">
                     <hr>
                     <h4>eminem - without me</h4>
+                    <audio src="audio/Eminem - Without Me .mp3" class="Songs"></audio>
+
                 </div>
                 <div class="Musicitem">
                     <hr>
@@ -44,13 +49,13 @@
                 <div class="menuIcon"> <img src="icons/menu.svg" alt=""></div>
             </div>
         </div>
-        <div class="player">
+        <div class="player" id="player">
             <div class="cover">
                 <img src="icons/music-icon.svg" alt="" class="music-icon">
             </div>
             <div class="information">
                 <div class="MusicName">
-                    <h3 class="InformText">eminem - Mockingbird</h3>
+                    <h3 class="InformText" id="title">eminem - Mockingbird</h3>
                 </div>
                 <div class="Artist">
                     <h3 class="InformText">Artist Name</h3>
@@ -69,19 +74,19 @@
                     </div>
                 </div>
                 <div class="musicBar">
-                    <span id="current-time">00:00</span>
+                    <span id="current-time" class="text">00:00</span>
                     <input type="range" id="music-progress" min="0" max="100" value="0">
-                    <span id="total-time">03:30</span>
+                    <span id="total-time" class="text">03:30</span>
                 </div>
                 <div class="Control">
                     <div class="Cicon">
-                        <img src="icons/prev.svg" alt="" class="prevIC">
+                        <button id="prev"><img src="icons/prev.svg" alt="" class="prevIC"></button>
                     </div>
                     <div class="Cicon">
-                        <img src="icons/play.svg" alt="" class="pas-stop">
+                        <button id="play" onclick="togglePlay()" ><img src="icons/play.svg" alt="" class="pas-stop" id="play-icon"></button>
                     </div>
                     <div class="Cicon">
-                        <img src="icons/next.svg" alt="" class="nextIC">
+                        <button id="next" ><img src="icons/next.svg" alt="" class="nextIC"></button>
                     </div>
                 </div>
             </div>

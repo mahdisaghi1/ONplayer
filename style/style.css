@@ -179,21 +179,13 @@
         margin-left: 10px;
         margin-right: 10px;
       }
-  
-      #music-progress::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 20px; /* عرض تامب */
-        height: 20px; /* ارتفاع تامب */
-        background-color: red; /* رنگ تامب */
-        border-radius: 50%;
+      
+      .text {
+        color: #FFFFFF;
+        font-family: OpenSans-Regular;
       }
-  
-      #music-progress::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 10px;
-        background-color: transparent; /* به دلیل استفاده از گرادیان */
-        border-radius: 5px;
-      }
+      
+      
     .Control {
         display: flex;
         flex-direction: row;
@@ -206,3 +198,4 @@
         margin-right: 5%;
         margin-left: 5%;
     }
+}
