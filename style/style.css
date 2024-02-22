@@ -172,16 +172,26 @@
         height: 5vh;
     }
     #music-progress {
-        -webkit-appearance: none; /* Customize thumb appearance */
-        width: 100%; /* Adjust width as needed */
-        height:2vh; /* Adjust height as needed */
-        background-color: #639CD9;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 2vh;
         border-radius: 70px;
+        margin-left: 10px;
+        margin-right: 10px;
       }
-      ::-webkit-slider-runnable-track {
+  
+      #music-progress::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px; /* عرض تامب */
+        height: 20px; /* ارتفاع تامب */
+        background-color: red; /* رنگ تامب */
+        border-radius: 50%;
+      }
+  
+      #music-progress::-webkit-slider-runnable-track {
         width: 100%;
         height: 10px;
-        background-color: #ccc;
+        background-color: transparent; /* به دلیل استفاده از گرادیان */
         border-radius: 5px;
       }
     .Control {
