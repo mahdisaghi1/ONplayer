@@ -52,7 +52,9 @@
         width: 100%;
         height: 10vh;
     }
-
+    .menuIcon {
+        filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
+    }
     /* list content ---> searchbox Divs */
     .filterIc {
         height: 4vh;
@@ -66,7 +68,7 @@
 
     .searchIcon {
         padding: 11%;
-        transform: translate(-30px)
+        transform: translate(-30px);
     }
 
     .searchInput {
@@ -119,8 +121,8 @@
     }
 
     .music-icon {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
         width: 20vh;
-
     }
 
     /* information style */
@@ -152,6 +154,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .OptIcons {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .OptIcons:hover {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
+    }
+
+    .OptIcons:active {
+        filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
     }
 
     .options {
@@ -206,4 +223,56 @@
         margin-right: 5%;
         margin-left: 5%;
     }
+
+    .Cicon button {
+        background: #474F7A;
+        border: none;
+        position: relative;
+    }
+
+    .prevIC {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .prevIC:hover {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
+    }
+
+    .pas-stop {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nextIC {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .pas-stop:hover {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
+    }
+
+    .nextIC:hover {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
+    }
+
+    .nextIC:active {
+        filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
+    }
+
+    .prevIC:active {
+        filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
+    }
+
+    .pas-stop:active {
+        filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+        transform: translateY(2px);
+    }
+
 }

@@ -1,4 +1,5 @@
 const Musiclist = document.getElementById("musicList");
+const TotalTime = document.getElementById("total-time");
 const musicProgress = document.getElementById("music-progress");
 const player = document.getElementById("player");
 const playButton = document.getElementById("play");
@@ -7,6 +8,9 @@ const audio = document.getElementById('audio');
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
 const playIcon = document.getElementById("play-icon");
+const Artist = document.getElementById("Artist");
+
+Artist
 let currentSongIndex = 0;
 
 
@@ -14,14 +18,17 @@ const song = [
     {
         title: 'Mockingbird',
         source: 'audio/12 Eminem - Mockingbird.mp3',
+        artist: "Eminem",
     },
     {
         title: "viguen - chera nemiragsi",
         source: "audio/@audio_editorbot.mp3",
+        artist: "viguen",
     },
     {
         title: "eminem - without me",
         source: "audio/Eminem - Without Me .mp3",
+        artist: "Eminem",
     },
 ];
 
@@ -67,6 +74,18 @@ function loadSong(index) {
     audio.src = song[index].source;
     audio.load();
     playPause();
+
+    document.getElementById('title').innerText = song[index].title;
+    document.getElementById('Artist').innerText = song[index].artist;
+
+    audio.addEventListener('loadedmetadata', function () {
+        TotalTime.innerHTML = formatTime(audio.duration);
+    });
+
+    // اضافه کردن این بخش برای پخش اهنگ
+    audio.addEventListener('ended', function () {
+        playNext();
+    });
 }
 function togglePlay() {
 
@@ -93,6 +112,12 @@ audio.addEventListener('timeupdate', function () {
 
     const gradientValue = musicProgress.value + '%';
     musicProgress.style.background = `linear-gradient(to right, #1F2544 ${gradientValue}, #639CD9 ${gradientValue}, #639CD9)`;
+});
+audio.addEventListener('ended', function () {
+    // انتخاب موزیک بعدی
+    currentSongIndex = (currentSongIndex + 1) % song.length;
+    // پخش موزیک بعدی
+    playSong(currentSongIndex);
 });
 
 function formatTime(time) {
