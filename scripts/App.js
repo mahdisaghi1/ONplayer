@@ -1,51 +1,72 @@
-// consts
-const musicProgress = document.getElementById('music-progress');
-
+const Musiclist = document.getElementById("musicList");
+const musicProgress = document.getElementById("music-progress");
 const player = document.getElementById("player");
 const playButton = document.getElementById("play");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
-const audio = document.querySelector("audio.Songs");
-const imageElement = document.querySelector('.pas-stop');
-const playIcon = document.getElementById('play-icon');
 const currentT = document.getElementById("current-time");
-let songIndex = 1;
+const audio = document.getElementById('audio');
+const nextButton = document.getElementById('next');
+const prevButton = document.getElementById('prev');
+const playIcon = document.getElementById("play-icon");
+let currentSongIndex = 0;
 
-
-// music list 
 
 const song = [
     {
         title: 'Mockingbird',
         source: 'audio/12 Eminem - Mockingbird.mp3',
-        cover: 'audio/cover_mockingbird.jpg'
     },
     {
         title: "viguen - chera nemiragsi",
         source: "audio/@audio_editorbot.mp3",
-        cover: "audio/cover_mockingbird.jpg",
     },
     {
         title: "eminem - without me",
-        source: "audio/@Eminem - Without Me.mp3",
-        cover: "audio/cover_mockingbird.jpg",
+        source: "audio/Eminem - Without Me .mp3",
     },
-
 ];
-// App
-function getSongTitle(song) {
-    return song.charAt(0).toUpperCase() + song.slice(1);
-}
-function loadSong(song) {
-    title.innerText = getSongTitle(song.title);
-    audio.src = song.source;
-    cover.src = song.cover;
-}
-function playSong() {
 
-    imageElement.setAttribute('src', 'icons/play.svg');
+for (let index = 0; index < song.length; index++) {
+    let div = document.createElement("div");
+    div.className = "Musicitem";
+    div.id = "Musicitem";
 
-    audio.play();
+    let li = document.createElement("li");
+    li.innerHTML = song[index].title;
+    li.id = "Music-" + index;
+    let hr = document.createElement("hr");
+    div.appendChild(hr);
+    div.appendChild(li);
+    Musiclist.appendChild(div);
+}
+let isPlaying = false;
+
+function playPause() {
+    if (!isPlaying) {
+        audio.play();
+        playIcon.src = 'icons/pause.svg';
+    } else {
+        audio.pause();
+        playIcon.src = 'icons/play.svg';
+    }
+    isPlaying = !isPlaying;
+}
+
+function playNext() {
+    currentSongIndex = (currentSongIndex + 1) % song.length;
+    console.log("Next Song Index:", currentSongIndex);
+    loadSong(currentSongIndex);
+}
+
+function playPrev() {
+    currentSongIndex = (currentSongIndex - 1 + song.length) % song.length;
+    console.log("Prev Song Index:", currentSongIndex);
+    loadSong(currentSongIndex);
+}
+
+function loadSong(index) {
+    audio.src = song[index].source;
+    audio.load();
+    playPause();
 }
 function togglePlay() {
 
@@ -57,19 +78,9 @@ function togglePlay() {
         playIcon.src = 'icons/play.svg';
     }
 }
-function prevSong() {
-    songIndex--;
-    if (songIndex < 0) songIndex = song.length - 1;
-    loadSong(song[songIndex]);
-    playSong();
-}
-
-function nextSong() {
-    songIndex++;
-    if (songIndex > song.length - 1) songIndex = 0;
-    loadSong(song[songIndex]);
-    playSong();
-}
+nextButton.addEventListener('click', playNext);
+prevButton.addEventListener('click', playPrev);
+playButton.addEventListener('click', playPause);
 
 audio.addEventListener('timeupdate', function () {
     const currentTime = audio.currentTime;
