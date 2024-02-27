@@ -47,14 +47,89 @@
         color: #FFFFFF;
     }
 
+    /* side nav */
     .menu {
-        display: grid;
+        display: flex;
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        margin: 0px;
+        background-color: #1F2544;
+        flex-direction: column;
+        font-family: OpenSans-Regular;
+        color: #FFFFFF;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .MenuOptions {
         width: 100%;
-        height: 10vh;
+        
+
+    }
+
+    .MenuOptions a {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        text-decoration: none;
+        color: #FFFFFF;
+
+
+    }
+
+    .MenuOptions h3 {
+        width: 80%;
+    }
+
+    .MenuOptions button {
+        background: none;
+        border: none;
+        width: 20%;
+
+    }
+
+    .logo {
+        flex-shrink: 1;
+        align-self: center;
+        height: 5vh;
+        font-size: 35px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .logo h2 {
+        margin: 0px;
+    }
+
+    .menuItems {
+        margin-top: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+        height: 90vh;
+        font-size: 25px;
+    }
+
+    .menuItems hr {
+        margin: 0;
+    }
+
+    .menuItems h3 {
+        padding-left: 10px;
+    }
+
+    .closebtn {
+        top: 0;
+        font-size: 36px;
+        margin: 10px;
+        flex-grow: 1;
+        filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
     }
 
     .menuIcon {
         filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
+        margin: 10px;
     }
 
     /* list content ---> searchbox Divs */
@@ -100,6 +175,7 @@
     hr {
         width: 100%;
     }
+
 
     /* player content */
     .player {

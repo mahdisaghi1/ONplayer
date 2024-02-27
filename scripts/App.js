@@ -1,4 +1,5 @@
 // consts
+const Menu = document.getElementById("menu");
 const Musiclist = document.getElementById("musicList");
 const TotalTime = document.getElementById("total-time");
 const musicProgress = document.getElementById("music-progress");
@@ -147,3 +148,11 @@ musicProgress.addEventListener('input', function () {
     const gradientValue = musicProgress.value + '%';
     musicProgress.style.background = `linear-gradient(to right, #1F2544 ${gradientValue}, #639CD9 ${gradientValue}, #639CD9)`;
 });
+
+function openMenu() {
+    Menu.style.width = "25%";
+}
+
+function closeMenu() {
+    Menu.style.width = "0";
+}

@@ -28,9 +28,36 @@
             <div class="musicList" id="musicList">
 
             </div>
+
             <!-- menu -->
-            <div class="menu">
-                <div class="menuIcon"> <img src="icons/menu.svg" alt="" class="menuIcon"></div>
+            <span onclick="openMenu()"><img src="icons/menu.svg" alt="" class="menuIcon"></span>
+            <div class="menu" id="menu">
+                <div class="logo">
+                    <h2>MP name</h2>
+                </div>
+                <div class="menuItems">
+                    <div class="MenuOptions">
+                        <a href="#" class="links">
+                            <h3>Account</h3>
+                            <img src="icons/account.svg" alt="">
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="MenuOptions">
+                        <a href="#" class="links">
+                            <h3>Upload</h3>
+                            <img src="icons/upload.svg" alt="">
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="MenuOptions">
+                        <a href="#" class="links">
+                            <h3>Theme</h3>
+                            <img src="icons/theme.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div><span onclick="closeMenu()"><img src="icons/close.svg" alt="" class="closebtn"></span></div>
             </div>
             <audio id="audio" controls style="display: none;"></audio>
         </div>
