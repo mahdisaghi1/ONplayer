@@ -1,3 +1,4 @@
+// consts
 const Musiclist = document.getElementById("musicList");
 const TotalTime = document.getElementById("total-time");
 const musicProgress = document.getElementById("music-progress");
@@ -9,11 +10,9 @@ const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
 const playIcon = document.getElementById("play-icon");
 const Artist = document.getElementById("Artist");
-
-Artist
 let currentSongIndex = 0;
 
-
+// music list
 const song = [
     {
         title: 'Mockingbird',
@@ -30,6 +29,16 @@ const song = [
         source: "audio/Eminem - Without Me .mp3",
         artist: "Eminem",
     },
+    {
+        title: "Dariush - Shahre Gham [320]",
+        source: "audio/Dariush - Shahre Gham [320].mp3",
+        artist: "Dariush",
+    },
+    {
+        title: "Hassan Shamaizadeh Berkeh",
+        source: "audio/Hassan Shamaizadeh Berkeh.mp3",
+        artist: "Hassan Shamaizadeh",
+    }
 ];
 
 for (let index = 0; index < song.length; index++) {
@@ -47,16 +56,7 @@ for (let index = 0; index < song.length; index++) {
 }
 let isPlaying = false;
 
-function playPause() {
-    if (!isPlaying) {
-        audio.play();
-        playIcon.src = 'icons/pause.svg';
-    } else {
-        audio.pause();
-        playIcon.src = 'icons/play.svg';
-    }
-    isPlaying = !isPlaying;
-}
+// function buttons
 
 function playNext() {
     currentSongIndex = (currentSongIndex + 1) % song.length;
@@ -69,7 +69,10 @@ function playPrev() {
     console.log("Prev Song Index:", currentSongIndex);
     loadSong(currentSongIndex);
 }
-
+nextButton.addEventListener('click', playNext);
+prevButton.addEventListener('click', playPrev);
+playButton.addEventListener('click', playPause);
+// load
 function loadSong(index) {
     audio.src = song[index].source;
     audio.load();
@@ -81,12 +84,13 @@ function loadSong(index) {
     audio.addEventListener('loadedmetadata', function () {
         TotalTime.innerHTML = formatTime(audio.duration);
     });
-
-    // اضافه کردن این بخش برای پخش اهنگ
     audio.addEventListener('ended', function () {
         playNext();
     });
 }
+
+
+// playing songs
 function togglePlay() {
 
     if (audio.paused) {
@@ -97,10 +101,19 @@ function togglePlay() {
         playIcon.src = 'icons/play.svg';
     }
 }
-nextButton.addEventListener('click', playNext);
-prevButton.addEventListener('click', playPrev);
-playButton.addEventListener('click', playPause);
+function playPause() {
+    if (!isPlaying) {
+        audio.play();
+        playIcon.src = 'icons/pause.svg';
+    } else {
+        audio.pause();
+        playIcon.src = 'icons/play.svg';
+    }
+    isPlaying = !isPlaying;
+}
 
+
+// updating music progress
 audio.addEventListener('timeupdate', function () {
     const currentTime = audio.currentTime;
     const duration = audio.duration;
@@ -113,13 +126,14 @@ audio.addEventListener('timeupdate', function () {
     const gradientValue = musicProgress.value + '%';
     musicProgress.style.background = `linear-gradient(to right, #1F2544 ${gradientValue}, #639CD9 ${gradientValue}, #639CD9)`;
 });
+// changing music at end
 audio.addEventListener('ended', function () {
-    // انتخاب موزیک بعدی
+
     currentSongIndex = (currentSongIndex + 1) % song.length;
-    // پخش موزیک بعدی
+
     playSong(currentSongIndex);
 });
-
+// updating music time
 function formatTime(time) {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);

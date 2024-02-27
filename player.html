@@ -10,7 +10,9 @@
 
 <body>
     <div class="MP_content">
+        <!-- list side -->
         <div class="list">
+            <!-- search box -->
             <div class="searchBox">
                 <div class="filter">
                     <button class="FilterBtn"><img src="icons/filter.svg" alt="" class="FilterIC"></button>
@@ -22,19 +24,22 @@
                     <img src="icons/search-icon.svg" alt="">
                 </div>
             </div>
-            
+            <!-- music list -->
             <div class="musicList" id="musicList">
-                
+
             </div>
+            <!-- menu -->
             <div class="menu">
                 <div class="menuIcon"> <img src="icons/menu.svg" alt="" class="menuIcon"></div>
             </div>
             <audio id="audio" controls style="display: none;"></audio>
         </div>
+        <!-- player side -->
         <div class="player" id="player">
             <div class="cover">
                 <img src="icons/music-icon.svg" alt="" class="music-icon">
             </div>
+            <!-- information music -->
             <div class="information">
                 <div class="MusicName">
                     <h3 class="InformText" id="title">music name</h3>
@@ -43,6 +48,7 @@
                     <h3 class="InformText" id="Artist">Artist Name</h3>
                 </div>
             </div>
+            <!-- panels -->
             <div class="Cpanel">
                 <div class="options">
                     <div class="OPT-icons">
@@ -55,20 +61,23 @@
                         <img src="icons/options.svg" alt="" class="OptIcons">
                     </div>
                 </div>
+                <!-- music bar -->
                 <div class="musicBar">
                     <span id="current-time" class="text">00:00</span>
                     <input type="range" id="music-progress" min="0" max="100" value="0">
                     <span id="total-time" class="text">00:00</span>
                 </div>
+                <!-- control -->
                 <div class="Control">
                     <div class="Cicon">
                         <button id="prev"><img src="icons/prev.svg" alt="" class="prevIC"></button>
                     </div>
                     <div class="Cicon">
-                        <button id="play" onclick="togglePlay()" ><img src="icons/play.svg" alt="" class="pas-stop" id="play-icon"></button>
+                        <button id="play" onclick="togglePlay()"><img src="icons/play.svg" alt="" class="pas-stop"
+                                id="play-icon"></button>
                     </div>
                     <div class="Cicon">
-                        <button id="next" ><img src="icons/next.svg" alt="" class="nextIC"></button>
+                        <button id="next"><img src="icons/next.svg" alt="" class="nextIC"></button>
                     </div>
                 </div>
             </div>
@@ -76,4 +85,5 @@
     </div>
 </body>
 <script src="scripts/App.js"></script>
+
 </html>
