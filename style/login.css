@@ -25,7 +25,7 @@
         height: 100vh;
         margin: 0px;
         background-image: url("/icons/background.svg");
-        background-size: 80% 80% ;
+        background-size: 80% 80%;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -37,7 +37,7 @@
         width: 25%;
         height: 60vh;
         background-color: rgba(71, 79, 122, 0.9);
-        box-shadow: 5px 5px 5px 5px  rgba(0, 0, 0, 0.3);
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
     }
 
     .header {
@@ -65,7 +65,7 @@
         padding-left: 10px;
         font-size: 20px;
         font-family: OpenSans-Regular;
-        box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
     }
 
     .button {
@@ -77,14 +77,14 @@
 
     .submit {
         padding: 0px;
-        height: 4.5vh;
+        height: 5vh;
         width: 83%;
         border-radius: 20px;
         background: #639CD9;
         border: none;
         margin: 10px;
         padding: 5px;
-        box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 
     }
 
@@ -96,13 +96,13 @@
 
     .change {
         padding: 0px;
-        height: 4.5vh;
+        height: 5vh;
         width: 83%;
         border-radius: 20px;
         background: #63D97D;
         border: none;
         margin: 10px;
-        box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 
     }
 
