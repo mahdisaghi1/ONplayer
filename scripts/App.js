@@ -16,19 +16,9 @@ let currentSongIndex = 0;
 // music list
 const song = [
     {
-        title: 'Mockingbird',
-        source: 'audio/12 Eminem - Mockingbird.mp3',
-        artist: "Eminem",
-    },
-    {
         title: "viguen - chera nemiragsi",
         source: "audio/@audio_editorbot.mp3",
         artist: "viguen",
-    },
-    {
-        title: "eminem - without me",
-        source: "audio/Eminem - Without Me .mp3",
-        artist: "Eminem",
     },
     {
         title: "Dariush - Shahre Gham [320]",
