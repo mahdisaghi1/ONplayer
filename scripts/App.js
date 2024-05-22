@@ -1,5 +1,7 @@
 // consts
 const Menu = document.getElementById("menu");
+const Main = document.getElementById("main");
+const Shadow = document.getElementById("shadow");
 const Musiclist = document.getElementById("musicList");
 const TotalTime = document.getElementById("total-time");
 const musicProgress = document.getElementById("music-progress");
@@ -140,9 +142,13 @@ musicProgress.addEventListener('input', function () {
 });
 
 function openMenu() {
+    Main.style.width = "100%";
     Menu.style.width = "25%";
+    Shadow.style.width = "100%";
 }
 
 function closeMenu() {
+    Main.style.width = "0";
     Menu.style.width = "0";
+    Shadow.style.width = "0";
 }

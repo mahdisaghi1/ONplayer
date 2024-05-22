@@ -31,85 +31,88 @@
 
             <!-- menu -->
             <span onclick="openMenu()"><img src="icons/menu.svg" alt="" class="menuIcon"></span>
-            <div class="menu" id="menu">
-                <div class="logo">
-                    <h2>MP name</h2>
+            <div class="main" id="main">
+                <div class="menu" id="menu">
+                    <div class="logo">
+                        <h2>MP name</h2>
+                    </div>
+                    <div class="menuItems">
+                        <div class="MenuOptions">
+                            <a href="login.html" class="links">
+                                <h3>Account</h3>
+                                <img src="icons/account.svg" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="MenuOptions">
+                            <a href="#" class="links">
+                                <h3>Upload</h3>
+                                <img src="icons/upload.svg" alt="">
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="MenuOptions">
+                            <a href="#" class="links">
+                                <h3>Theme</h3>
+                                <img src="icons/theme.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div><span onclick="closeMenu()"><img src="icons/close.svg" alt="" class="closebtn"></span></div>
                 </div>
-                <div class="menuItems">
-                    <div class="MenuOptions">
-                        <a href="login.html" class="links">
-                            <h3>Account</h3>
-                            <img src="icons/account.svg" alt="">
-                        </a>
-                    </div>
-                    <hr>
-                    <div class="MenuOptions">
-                        <a href="#" class="links">
-                            <h3>Upload</h3>
-                            <img src="icons/upload.svg" alt="">
-                        </a>
-                    </div>
-                    <hr>
-                    <div class="MenuOptions">
-                        <a href="#" class="links">
-                            <h3>Theme</h3>
-                            <img src="icons/theme.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div><span onclick="closeMenu()"><img src="icons/close.svg" alt="" class="closebtn"></span></div>
+                <div class="shadow" id="shadow"></div>
             </div>
-            <audio id="audio" controls style="display: none;"></audio>
+                <audio id="audio" controls style="display: none;"></audio>
         </div>
-        <!-- player side -->
-        <div class="player" id="player">
-            <div class="cover">
-                <img src="icons/music-icon.svg" alt="" class="music-icon">
-            </div>
-            <!-- information music -->
-            <div class="information">
-                <div class="MusicName">
-                    <h3 class="InformText" id="title">music name</h3>
+            <!-- player side -->
+            <div class="player" id="player">
+                <div class="cover">
+                    <img src="icons/music-icon.svg" alt="" class="music-icon">
                 </div>
-                <div class="Artist">
-                    <h3 class="InformText" id="Artist">Artist Name</h3>
-                </div>
-            </div>
-            <!-- panels -->
-            <div class="Cpanel">
-                <div class="options">
-                    <div class="OPT-icons">
-                        <img src="icons/like-off.svg" alt="" class="OptIcons">
+                <!-- information music -->
+                <div class="information">
+                    <div class="MusicName">
+                        <h3 class="InformText" id="title">music name</h3>
                     </div>
-                    <div class="OPT-icons">
-                        <img src="icons/download.svg" alt="" class="OptIcons">
-                    </div>
-                    <div class="OPT-icons">
-                        <img src="icons/options.svg" alt="" class="OptIcons">
+                    <div class="Artist">
+                        <h3 class="InformText" id="Artist">Artist Name</h3>
                     </div>
                 </div>
-                <!-- music bar -->
-                <div class="musicBar">
-                    <span id="current-time" class="text">00:00</span>
-                    <input type="range" id="music-progress" min="0" max="100" value="0">
-                    <span id="total-time" class="text">00:00</span>
-                </div>
-                <!-- control -->
-                <div class="Control">
-                    <div class="Cicon">
-                        <button id="prev"><img src="icons/prev.svg" alt="" class="prevIC"></button>
+                <!-- panels -->
+                <div class="Cpanel">
+                    <div class="options">
+                        <div class="OPT-icons">
+                            <img src="icons/like-off.svg" alt="" class="OptIcons">
+                        </div>
+                        <div class="OPT-icons">
+                            <img src="icons/download.svg" alt="" class="OptIcons">
+                        </div>
+                        <div class="OPT-icons">
+                            <img src="icons/options.svg" alt="" class="OptIcons">
+                        </div>
                     </div>
-                    <div class="Cicon">
-                        <button id="play" onclick="togglePlay()"><img src="icons/play.svg" alt="" class="pas-stop"
-                                id="play-icon"></button>
+                    <!-- music bar -->
+                    <div class="musicBar">
+                        <span id="current-time" class="text">00:00</span>
+                        <input type="range" id="music-progress" min="0" max="100" value="0">
+                        <span id="total-time" class="text">00:00</span>
                     </div>
-                    <div class="Cicon">
-                        <button id="next"><img src="icons/next.svg" alt="" class="nextIC"></button>
+                    <!-- control -->
+                    <div class="Control">
+                        <div class="Cicon">
+                            <button id="prev"><img src="icons/prev.svg" alt="" class="prevIC"></button>
+                        </div>
+                        <div class="Cicon">
+                            <button id="play" onclick="togglePlay()"><img src="icons/play.svg" alt="" class="pas-stop"
+                                    id="play-icon"></button>
+                        </div>
+                        <div class="Cicon">
+                            <button id="next"><img src="icons/next.svg" alt="" class="nextIC"></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 <script src="scripts/App.js"></script>
 

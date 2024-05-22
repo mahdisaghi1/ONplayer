@@ -50,24 +50,40 @@
     }
 
     /* side nav */
+    .main {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        margin: 0px;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+    .shadow {
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        margin: 0px;
+        background-color: #00000098;
+    }
     .menu {
         display: flex;
         height: 100vh;
         width: 0;
         position: fixed;
-        z-index: 1;
         margin: 0px;
         background-color: #1F2544;
         flex-direction: column;
         font-family: OpenSans-Regular;
         color: #FFFFFF;
         overflow-x: hidden;
-        transition: 0.5s;
+        transition: 0.3s;
+        z-index: 2 ;
     }
 
     .MenuOptions {
         width: 100%;
-
 
     }
 
