@@ -4,8 +4,9 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    body {
+    .body {
         margin: 0;
+        padding: 0;
         background: hsla(230, 37%, 19%, 1);
         background: linear-gradient(270deg, hsla(230, 37%, 19%, 1) 0%, hsla(257, 22%, 39%, 1) 49%, hsla(324, 100%, 91%, 1) 100%);
 
