@@ -1,5 +1,13 @@
+/* Root control */
+:root {
+    --sec-color: #1F2544;
+    --main-color: #474F7A;
+    --white: #fff;
+    --shadow: #00000098;
+    --Wcover:#F3F3F3;
+    --green : #63D97D;
+}
 /* main page */
-
 @font-face {
     font-family: "OpenSans-Regular";
     src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
@@ -22,7 +30,7 @@
 
     /* list content */
     .list {
-        background-color: #1F2544;
+        background-color: var(--sec-color);
         width: 25%;
         height: 100vh;
         display: flex;
@@ -65,7 +73,7 @@
         width: 0;
         position: fixed;
         margin: 0px;
-        background-color: #00000098;
+        background-color: var(--shadow);
     }
     .menu {
         display: flex;
@@ -73,10 +81,10 @@
         width: 0;
         position: fixed;
         margin: 0px;
-        background-color: #1F2544;
+        background-color: var(--sec-color);
         flex-direction: column;
         font-family: OpenSans-Regular;
-        color: #FFFFFF;
+        color: var(--white);
         overflow-x: hidden;
         transition: 0.3s;
         z-index: 2 ;
@@ -92,7 +100,7 @@
         flex-direction: row;
         width: 100%;
         text-decoration: none;
-        color: #FFFFFF;
+        color: var(--white);
 
 
     }
@@ -157,7 +165,7 @@
     }
 
     .FilterBtn {
-        background: #1F2544;
+        background: var(--sec-color);
         border: none;
     }
 
@@ -197,7 +205,7 @@
 
     /* player content */
     .player {
-        background-color: #474F7A;
+        background-color: var(--main-color);
         width: 75%;
         height: 100vh;
         display: flex;
@@ -209,7 +217,7 @@
     .cover {
         width: 70%;
         height: 55vh;
-        background-color: #F3F3F3;
+        background-color: var(--Wcover);
         margin-top: 45px;
         border-radius: 37px;
         box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
@@ -234,7 +242,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         font-family: OpenSans-Regular;
-        color: #FFFFFF;
+        color: var(--white);
     }
 
     .MusicName {
@@ -303,7 +311,7 @@
     }
 
     .text {
-        color: #FFFFFF;
+        color: var(--white);
         font-family: OpenSans-Regular;
     }
 
@@ -388,7 +396,7 @@
 
     a {
         text-decoration: none;
-        color: #FFFFFF;
+        color: var(--white);
         font-family: OpenSans-Regular;
     }
 
@@ -419,7 +427,7 @@
     .header {
         font-family: OpenSans-Regular;
         font-size: 30px;
-        color: #F3F3F3;
+        color: var(--Wcover);
         height: 15vh;
     }
 
@@ -439,7 +447,7 @@
     }
 
     .forms_SignUP input {
-        background-color: #F3F3F3;
+        background-color: var(--Wcover);
         margin: 15px;
         width: 80%;
         height: 4.5vh;
@@ -452,7 +460,7 @@
 
     }
     .forms input {
-        background-color: #F3F3F3;
+        background-color: var(--Wcover);
         margin: 20px;
         width: 80%;
         height: 4.5vh;
@@ -486,7 +494,7 @@
 
     .submit h3 {
         margin: 0px;
-        color: #FFFFFF;
+        color: var(--white);
         font-family: OpenSans-Regular;
     }
 
@@ -495,7 +503,7 @@
         height: 5vh;
         width: 83%;
         border-radius: 20px;
-        background: #63D97D;
+        background: var(--green);
         border: none;
         margin: 10px;
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -504,7 +512,7 @@
 
     .change h3 {
         margin: 0px;
-        color: #FFFFFF;
+        color: var(--white);
         font-family: OpenSans-Regular;
     }
 
