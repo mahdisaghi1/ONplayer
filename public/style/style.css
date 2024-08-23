@@ -391,7 +391,7 @@
     transform: translateY(2px);
   }
   /* LogIN form */
-  .body {
+  /* .body {
     margin: 0;
     padding: 0;
     background: hsla(230, 37%, 19%, 1);
@@ -417,7 +417,7 @@
     );
 
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1F2544", endColorstr="#5B4E7B", GradientType=1);
-  }
+  } */
 
   a {
     text-decoration: none;
@@ -433,8 +433,8 @@
     width: 100%;
     height: 100vh;
     margin: 0px;
-    background-image: url("/icons/background.svg");
-    background-size: 80% 80%;
+    background-image: url("/icons/bg1.jpg");
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -445,7 +445,7 @@
     align-items: center;
     width: 25%;
     height: 60vh;
-    background-color: rgba(71, 79, 122, 0.9);
+    background-color:#1f1f1f;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
   }
 
@@ -508,7 +508,8 @@
     height: 5vh;
     width: 83%;
     border-radius: 20px;
-    background: #639cd9;
+    background: #e69d00;
+    /* background: #639cd9; */
     border: none;
     margin: 10px;
     padding: 5px;
@@ -526,7 +527,7 @@
     height: 5vh;
     width: 83%;
     border-radius: 20px;
-    background: var(--green);
+    background: #e68200;
     border: none;
     margin: 10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
