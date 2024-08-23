@@ -212,7 +212,7 @@
   /* cover style */
   .cover {
     width: 70%;
-    height: 55vh;
+    height: 50vh;
     background-color: var(--Wcover);
     margin-top: 45px;
     border-radius: 37px;
@@ -223,14 +223,13 @@
   }
   .Music-cover {
     width: 70%;
-    height: 55vh;
+    height: 50vh;
     margin-top: 45px;
     border-radius: 37px;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url();
   }
   .music-icon {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
@@ -249,10 +248,12 @@
   }
 
   .InformText {
+    box-sizing: border-box;
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: OpenSans-Regular;
     color: var(--white);
+    font-size: xx-large;
   }
 
   .MusicName {
